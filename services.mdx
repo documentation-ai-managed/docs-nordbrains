@@ -1,0 +1,168 @@
+---
+title: Nordbrains Services Overview
+description: Explore the core services offered by Nordbrains, including custom system development, web and mobile applications, and Shopify e-commerce solutions.
+---
+
+## Overview
+
+Nordbrains provides tailored development services to help you build robust digital solutions. You get custom system integrations, modern web sites, cross-platform mobile apps, and optimized Shopify stores. Each service focuses on scalability, performance, and your specific business needs.
+
+<Callout kind="info">
+  Contact our team to discuss your project requirements and receive a free consultation.
+</Callout>
+
+## Core Services
+
+Discover our main offerings through these feature cards. Each service includes full-cycle development from concept to deployment.
+
+<Columns cols={2}>
+  <Card title="Custom System Development" icon="settings" href="#custom-systems">
+    Build and integrate bespoke systems for your operations. Connect legacy tools with modern APIs seamlessly.
+  </Card>
+  <Card title="Web Development" icon="globe" href="#web-development">
+    Create responsive, high-performance websites using the latest frameworks.
+  </Card>
+  <Card title="Mobile App Development" icon="smartphone" href="#mobile-apps">
+    Develop native and hybrid apps for iOS and Android with intuitive user experiences.
+  </Card>
+  <Card title="Shopify E-Commerce" icon="shopping-cart" href="#shopify">
+    Set up advanced stores with custom themes, apps, and optimizations.
+  </Card>
+</Columns>
+
+## Getting Started with a Project
+
+Follow these steps to launch your project with Nordbrains.
+
+<Steps>
+  <Step title="Consultation" icon="message-circle">
+    Schedule a free call to outline your goals and requirements.
+  </Step>
+  <Step title="Proposal" icon="file-text">
+    Receive a detailed proposal with timeline, costs, and milestones.
+  </Step>
+  <Step title="Development" icon="code">
+    Watch your solution come to life with regular updates and testing.
+  </Step>
+  <Step title="Launch" icon="rocket">
+    Deploy to production with full support and maintenance options.
+  </Step>
+</Steps>
+
+## Custom System Development and Integration
+
+You rely on Nordbrains for complex integrations. We connect your CRM, ERP, and third-party services using secure APIs.
+
+For example, integrate a payment gateway:
+
+<CodeGroup tabs="Node.js,Python">
+  ```javascript
+  const express = require('express');
+  const app = express();
+
+  app.post('/integrate-payment', async (req, res) => {
+    const { amount, token } = req.body;
+    const response = await fetch('https://api.paymentprovider.com/charge', {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${process.env.API_KEY}` },
+      body: JSON.stringify({ amount, token })
+    });
+    res.json(await response.json());
+  });
+  ```
+  ```python
+  from flask import Flask, request, jsonify
+  import requests
+
+  app = Flask(__name__)
+
+  @app.route('/integrate-payment', methods=['POST'])
+  def integrate_payment():
+      data = request.json
+      amount, token = data['amount'], data['token']
+      response = requests.post('https://api.paymentprovider.com/charge',
+                               headers={'Authorization': f'Bearer {os.getenv("API_KEY")}'},
+                               json={'amount': amount, 'token': token})
+      return jsonify(response.json())
+  ```
+</CodeGroup>
+
+## Web Development for Modern Sites
+
+Build fast, SEO-friendly websites. We use React, Next.js, or Vue.js based on your needs.
+
+<Expandable title="Advanced Features" default-open="false">
+  Include server-side rendering, progressive web apps, and custom animations.
+</Expandable>
+
+## Mobile App Creation
+
+Develop apps that work seamlessly across platforms.
+
+<Tabs>
+  <Tab title="iOS (Swift)" icon="apple">
+    ```swift
+    import SwiftUI
+
+    struct ContentView: View {
+        var body: some View {
+            VStack {
+                Text("Welcome to Your App")
+                    .font(.largeTitle)
+                Button("Get Started") {
+                    // Handle action
+                }
+            }
+        }
+    }
+    ```
+  </Tab>
+  <Tab title="Android (Kotlin)" icon="android">
+    ```kotlin
+    import androidx.compose.material3.Button
+    import androidx.compose.material3.Text
+    import androidx.compose.runtime.Composable
+
+    @Composable
+    fun HomeScreen() {
+        Button(onClick = { /* Handle click */ }) {
+            Text("Get Started")
+        }
+    }
+    ```
+  </Tab>
+</Tabs>
+
+## Advanced Shopify Store Setups
+
+Customize your Shopify store with themes, apps, and liquid templates.
+
+<Callout kind="tip">
+  Optimize for conversions with A/B testing and performance audits.
+</Callout>
+
+Example liquid snippet for a custom product card:
+
+````liquid
+<div class="product-card">
+  <h3>{{ product.title }}</h3>
+  <p>{{ product.price | money }}</p>
+  {% if product.available %}
+    <a href="{{ product.url }}">Add to Cart</a>
+  {% else %}
+    <span>Sold Out</span>
+  {% endif %}
+</div>
+````
+
+<Columns cols={3}>
+  <Card title="Next Steps" icon="arrow-right" href="/quickstart">
+    Start your project today.
+  </Card>
+  <Card title="Case Studies" icon="book-open" href="/changelog">
+    See real results.
+  </Card>
+  <Card title="Contact Us" icon="mail" href="#contact">
+    Get in touch.
+  </Card>
+</Columns>

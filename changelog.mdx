@@ -1,0 +1,130 @@
+---
+title: Changelog
+description: Track the latest updates, new services, and improvements from Nordbrains.
+---
+
+## Recent Updates
+
+Stay informed about Nordbrains' latest enhancements in custom development, web solutions, mobile apps, and Shopify integrations. You receive timely updates on service improvements, new capabilities, and client-driven features.
+
+<Columns cols={3}>
+  <Card title="Service Enhancements" icon="zap" href="#v2-0-0">
+    Discover faster deployments and Shopify optimizations.
+  </Card>
+  <Card title="New Integrations" icon="link" href="#v1-5-0">
+    Explore headless commerce and API expansions.
+  </Card>
+  <Card title="Client Features" icon="users" href="#v1-0-0">
+    Implementations based on your feedback.
+  </Card>
+</Columns>
+
+<Update label="2024-10-15" description="v2.0.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added support for Shopify Plus headless commerce setups, enabling fully decoupled storefronts with Hydrogen framework.
+- Introduced mobile app prototyping with React Native for iOS and Android cross-platform development.
+
+## Improvements
+
+- Reduced custom web deployment time by `>50%` using optimized CI/CD pipelines.
+- Enhanced e-commerce analytics integration with Google Analytics 4 and custom dashboards.
+
+## Bug Fixes
+
+- Fixed intermittent webhook failures in Shopify apps during high-traffic periods.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.5.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- New integration capabilities for ERP systems like SAP and custom APIs with `https://api.example.com/v1/integrations`.
+- Client feedback implementation: Added multi-language support for web apps using Next.js i18n.
+
+## Improvements
+
+- Upgraded security protocols with OAuth 2.0 for all mobile app authentications.
+
+## Bug Fixes
+
+- Resolved cart abandonment tracking issues in Shopify themes.
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // New ERP integration example
+  const integrateERP = async (data) => {
+    const response = await fetch('https://api.example.com/v1/erp/sync', {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${YOUR_TOKEN}` },
+      body: JSON.stringify(data)
+    });
+    return response.json();
+  };
+  ```
+  ```python
+  # New ERP integration example
+  import requests
+  response = requests.post(
+      'https://api.example.com/v1/erp/sync',
+      headers={'Authorization': f'Bearer {YOUR_TOKEN}'},
+      json=data
+  )
+  ```
+</CodeGroup>
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Launched core services: Custom web development, mobile apps, and Shopify e-commerce solutions.
+- Initial client portal at `https://dashboard.example.com` for project tracking.
+
+## Breaking Changes
+
+- Migrated from legacy payment gateways to Stripe v3 – update your integrations.
+
+## Bug Fixes
+
+- Stabilized initial Shopify app installations.
+
+</Update>
+
+## Upcoming Roadmap
+
+<ExpandableGroup>
+  <Expandable title="Q4 2024: AI Integrations" default-open="true">
+
+  Plan to add AI-driven personalization for Shopify stores and chatbots for web apps. You can expect beta access in November.
+
+  </Expandable>
+  <Expandable title="Q1 2025: Advanced Mobile">
+
+  Full PWA support and AR features for e-commerce mobile apps.
+
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="tip">
+  Subscribe to our newsletter at `https://nordbrains.com/newsletter` to get early notifications on betas and roadmap updates. Follow us on GitHub for open-source Shopify themes.
+</Callout>
+
+## Stay Updated
+
+Follow these steps to ensure you never miss an update:
+
+<Steps>
+  <Step title="Subscribe" icon="bell">
+    Join the newsletter for monthly digests.
+  </Step>
+  <Step title="Check Dashboard" icon="monitor">
+    Log in to `https://dashboard.example.com/changelog` for personalized notes.
+  </Step>
+  <Step title="GitHub Repo" icon="github">
+    Watch `https://github.com/nordbrains/shopify-themes` for code changes.
+  </Step>
+</Steps>
